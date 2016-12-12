@@ -1,6 +1,6 @@
 require "rspec"
 
-require "./main.rb"
+require "./backend/level1/main.rb"
 
 RSpec.describe Rental, type: :model do
 
@@ -18,8 +18,8 @@ end
 
 RSpec.describe CalculateRentalPrices, type: :model do
 
-  let(:data)          { JSON.parse(File.read('data.json')) }
-  let(:output)        { JSON.parse(File.read('output.json')) }
+  let(:data)          { JSON.parse(File.read('./backend/level1/data.json')) }
+  let(:output)        { JSON.parse(File.read('./backend/level1/output.json')) }
 
 
   it 'sets all prices' do
